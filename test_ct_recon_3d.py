@@ -10,7 +10,6 @@ import torch.backends.cudnn as cudnn
 import tensorboardX
 
 import numpy as np
-from tqdm import tqdm
 
 from networks import Positional_Encoder, FFN, SIREN
 from utils import get_config, prepare_sub_folder, get_data_loader, save_image_3d
