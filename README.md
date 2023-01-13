@@ -5,8 +5,8 @@
 
 - [Overview](#overview)
 - [Installation Guide](#installation-guide)
-- [Instructions for Use](#instructions-for-use)
-- [License](./LICENSE)
+- [Instructions for Running Code](#instructions-for-running-code)
+- [License](#license)
 - [Citation](#citation)
 
 # 1. Overview
@@ -46,7 +46,7 @@ pip install package-name
 
 
 
-# 3. Instructions for Use
+# 3. Instructions for Running Code
 
 
 ## 2D CT Reconstruction Experiment
