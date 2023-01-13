@@ -14,12 +14,12 @@
 This repository provides the code for our TNNLS 2022 papar "NeRP: Implicit Neural Representation Learning With Prior Embedding for Sparsely Sampled Image Reconstruction" ([paper link](https://ieeexplore.ieee.org/document/9788018)). Using the code requires users to have basic knowledge about python, PyTorch, and deep neural networks.
 
 <p align="center">
-  <img src="https://github.com/liyues/NeRP/blob/main/img/Figure_1.svg" width="400" height="400">
+  <img src="https://github.com/liyues/NeRP/blob/main/img/Figure_1.svg" width="1200" height="600">
 </p>
 
 # 2. Installation Guide
 
-Before running this package, users should have `Python`, `PyTorch`, and several python packages installed (`numpy`, `skimage`, `yaml`, `opencv`, 'odl') .
+Before running this package, users should have `Python`, `PyTorch`, and several python packages installed (`numpy`, `skimage`, `yaml`, `opencv`, `odl`) .
 
 
 ## Package Versions
@@ -38,7 +38,8 @@ odl: 1.0.0.dev0
 
 ## Package Installment
 
-Users should install all the required packages shown above prior to running the algorithm. Most packages can be installed by running following command in terminal on Linux. To install of PyTorch, please refer to their official [website](https://pytorch.org). 
+Users should install all the required packages shown above prior to running the algorithm. Most packages can be installed by running following command in terminal on Linux. To install PyTorch, please refer to their official [website](https://pytorch.org). To install ODL, please refer to their official [website](https://github.com/odlgroup/odl).
+
 ```
 pip install package-name
 ```
