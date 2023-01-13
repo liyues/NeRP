@@ -11,7 +11,11 @@
 
 # 1. Overview
 
-This repository provides the code for our TNNLS 2022 papar "NeRP: Implicit Neural Representation Learning With Prior Embedding for Sparsely Sampled Image Reconstruction" ([paper link](https://ieeexplore.ieee.org/document/9788018)). Using the code requires users to have basic knowledge about python, PyTorch, and deep neural networks.
+This repository provides the PyTorch code for our TNNLS 2022 papar [NeRP: Implicit Neural Representation Learning With Prior Embedding for Sparsely Sampled Image Reconstruction](https://ieeexplore.ieee.org/document/9788018).
+
+by Liyue Shen, John Pauly, Lei Xing
+
+We propose an implicit <B>Ne</B>ural <B>R</B>epresentation learning methodology with <B>P</B>rior embedding (<B>NeRP</B>) to reconstruct a computational image from sparsely sampled measurements. The method differs fundamentally from previous deep learning-based image reconstruction approaches in that NeRP exploits the internal information in an image prior, and the physics of the sparsely sampled measurements to produce a representation of the unknown subject. No large-scale data is required to train the NeRP except for a prior image and sparsely sampled measurements. We demonstrate that NeRP is a general methodology that generalizes to different imaging modalities including 2D / 3D CT and MRI. 
 
 <p align="center">
   <img src="https://github.com/liyues/NeRP/blob/main/img/Figure_1.svg" width="1200" height="600">
