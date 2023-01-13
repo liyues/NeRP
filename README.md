@@ -51,6 +51,8 @@ pip install package-name
 
 ## 2D CT Reconstruction Experiment
 
+The experiments of 2D CT image reconstruction use the 2D parallel-beam geometry.
+
 ### Step 1: Prior embedding
 
 Represent 2D image by implicit network network. The prior image ([pancs_4dct_phase1.npz](./data/ct_data/pancs_4dct_phase1.npz): phase-1 image of a 10-phase 4D pancreas CT data) is provided under [data/ct_data](./data/ct_data) folder.
@@ -74,6 +76,8 @@ python train_ct_recon.py --config configs/ct_recon.yaml
 ```
 
 ## 3D CT Reconstruction Experiment
+
+The experiments of 3D CT image reconstruction use the 3D cone-beam geometry.
 
 ### Step 1: Prior embedding
 
