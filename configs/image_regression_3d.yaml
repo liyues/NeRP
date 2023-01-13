@@ -1,0 +1,37 @@
+# Logger options
+log_iter: 50                 # How often to log the training loss 
+val_iter: 200                # How often to validate testing and save output images during training
+image_save_iter: 1000        # How often do you want to save output images during training
+display_image_num: 8
+
+# Optimization options
+max_iter: 2000                # Maximum number of training iterations
+batch_size: 1                 # Batch size
+loss: L2
+optimizer: Adam               # Optimizer for trainings
+weight_decay: 0.0001          # Weight decay
+beta1: 0.9                    # Adam parameter
+beta2: 0.999                  # Adam parameter
+lr: 0.0001                    # Initial learning rate
+
+
+################## 3D CT Image ###################
+# Model options (3D CT)
+model: SIREN                  # Options for MLP models [FFN | SIREN]
+net: 
+  network_input_size: 512     # Input size for network
+  network_output_size: 1
+  network_depth: 8            # Depth of MLP layers
+  network_width: 256          # Width of MLP layers
+
+encoder:
+  embedding: gauss            #  Input embedding method
+  scale: 4
+  embedding_size: 256         # Embedding size for input Fourier feature encoding
+  coordinates_size: 3
+
+
+# Data
+data: pancs_4dct_3d_real_phase1
+img_size: [40, 128, 128]     # (92, 256, 256)
+img_path: ./data/ct_data/pancs_4dct_phase1.npz  # Image path for data loading
