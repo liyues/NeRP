@@ -12,7 +12,7 @@ from data import ImageDataset, ImageDataset_2D, ImageDataset_3D
 
 def get_config(config):
     with open(config, 'r') as stream:
-        return yaml.load(stream)
+        return yaml.safe_load(stream)
 
 def prepare_sub_folder(output_directory):
     image_directory = os.path.join(output_directory, 'images')
