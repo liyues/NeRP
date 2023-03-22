@@ -37,6 +37,7 @@ skimage: 0.17.2
 yaml: 0.1.7
 opencv: 3.4.2
 odl: 1.0.0.dev0
+astra-toolbox
 ```
 
 

@@ -64,7 +64,7 @@ def build_conebeam_gemotry(param):
                                           det_radius=param.param['dde'], # radius of the detector circle 
                                           axis=[0, 0, 1]) # rotation axis is z-axis: (0, 0, 1)
     
-    ray_trafo = odl.tomo.RayTransform(domain=reco_space, # domain of forward projector
+    ray_trafo = odl.tomo.RayTransform(vol_space=reco_space, # domain of forward projector
                                      geometry=geometry, # geometry of the transform
                                      impl='astra_cuda') # implementation back-end for the transform: ASTRA toolbox, using CUDA, 2D or 3D
     
