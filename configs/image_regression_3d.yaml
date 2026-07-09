@@ -19,15 +19,15 @@ lr: 0.0001                    # Initial learning rate
 # Model options (3D CT)
 model: SIREN                  # Options for MLP models [FFN | SIREN]
 net: 
-  network_input_size: 512     # Input size for network
+  network_input_size: 256     # Input size for network
   network_output_size: 1
-  network_depth: 8            # Depth of MLP layers
-  network_width: 256          # Width of MLP layers
+  network_depth: 6            # Depth of MLP layers
+  network_width: 128          # Width of MLP layers
 
 encoder:
   embedding: gauss            #  Input embedding method
   scale: 4
-  embedding_size: 256         # Embedding size for input Fourier feature encoding
+  embedding_size: 128         # Embedding size for input Fourier feature encoding
   coordinates_size: 3
 
 

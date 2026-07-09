@@ -12,7 +12,7 @@ from data import ImageDataset, ImageDataset_2D, ImageDataset_3D
 
 def get_config(config):
     with open(config, 'r') as stream:
-        return yaml.load(stream)
+        return yaml.safe_load(stream)
 
 def prepare_sub_folder(output_directory):
     image_directory = os.path.join(output_directory, 'images')
@@ -29,7 +29,7 @@ def prepare_sub_folder(output_directory):
 
 def get_data_loader(data, img_path, img_dim, img_slice,
                     train, batch_size, 
-                    num_workers=4, 
+                    num_workers=0, 
                     return_data_idx=False):
     
     if data == 'phantom':
@@ -96,7 +96,10 @@ def ct_parallel_project_2d(img, theta):
 	# (y, x)=(i, j): [0, w] -> [-0.5, 0.5]
 	y, x = torch.meshgrid([torch.arange(h, dtype=torch.float32) / h - 0.5,
 							torch.arange(w, dtype=torch.float32) / w - 0.5])
-
+    
+	x = x.to(theta.device)
+	y = y.to(theta.device)
+    
 	# Rotation transform matrix: simulate parallel projection rays
 	x_rot = x * torch.cos(theta) - y * torch.sin(theta)
 	y_rot = x * torch.sin(theta) + y * torch.cos(theta)
@@ -122,8 +125,8 @@ def ct_parallel_project_2d_batch(img, thetas):
     '''
     projs = []
     for theta in thetas:
-    	proj = ct_parallel_project_2d(img, theta)
-    	projs.append(proj)
+        proj = ct_parallel_project_2d(img, theta)
+        projs.append(proj)
     projs = torch.cat(projs, dim=1)  # [b, num, w, c]
 
     return projs
